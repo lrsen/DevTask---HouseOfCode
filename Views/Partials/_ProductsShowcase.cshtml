@@ -1,0 +1,132 @@
+﻿@inherits Umbraco.Web.Mvc.UmbracoViewPage
+@{
+    var products = Umbraco.Content(Guid.Parse("05219f2f-d1bb-4d25-b25f-aa80f78e1e61"))
+    .ChildrenOfType("productItem")
+    .Where(x => x.IsVisible());
+}
+
+
+<div class="container">
+    <div class="row">
+        @foreach (var product in products)
+        {
+            if (@product.SortOrder == 0)
+            {
+                <div class="col-3">
+                    <div class="product-bg-small">
+                        <div class="product-headlines py-3 px-3">
+                            @product.Value("productTitle")
+                        </div>
+                        <div>
+                            @{ var featureSet = product.Value<string[]>("productFeature"); }
+                            <ul>
+                                @foreach (var feature in featureSet)
+                                {
+                                    <li>
+                                        @feature
+                                    </li>
+                                }
+                            </ul>
+                        </div>
+                        <div class="footer mt-auto py-3">
+                            <p class="text-center">                                
+                                @product.Value("productPrice")DKK /måned<br />
+                                Ekskl. moms                                
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            };
+            if (@product.SortOrder == 1)
+            {
+                <div class="col-3">
+                    <div class="product-bg-medium">
+                        <div class="product-headlines py-3 px-3">
+                            @product.Value("productTitle")
+                        </div>
+                        <div>
+                            @{ var featureSet = product.Value<string[]>("productFeature"); }
+                            <ul>
+                                @foreach (var feature in featureSet)
+                                {
+                                    <li>
+                                        @feature
+                                    </li>
+                                }
+                            </ul>
+                        </div>
+                        <div class="footer mt-auto py-3">
+                            <p class="text-center">
+                                @product.Value("productPrice")DKK /måned<br />
+                                Ekskl. moms
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            };
+            if (@product.SortOrder == 2)
+            {
+                <div class="col-3">
+                    <div class="product-bg-large">
+                        <div class="product-headlines py-3 px-3">
+                            @product.Value("productTitle")
+                        </div>
+                        <div>
+                            @{ var featureSet = product.Value<string[]>("productFeature"); }
+                            <ul>
+                                @foreach (var feature in featureSet)
+                                {
+                                    <li>
+                                        @feature
+                                    </li>
+                                }
+                            </ul>
+                        </div>
+                        <div class="footer mt-auto py-3">
+                            <p class="text-center">                                
+                                @product.Value("productPrice")DKK /måned<br />
+                                Ekskl. moms                                
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            };
+            if (@product.SortOrder == 3)
+            {
+                <div class="col-3">
+                    <div class="product-bg-enterprise rounded-corners">
+                        <div class="product-headlines py-3 px-3">
+                            @product.Value("productTitle")
+                        </div>
+                        <div>
+                            @{ var featureSet = product.Value<string[]>("productFeature"); }
+                            <ul>
+                                @foreach (var feature in featureSet)
+                                {
+                                    <li>
+                                        @feature
+                                    </li>
+                                }
+                            </ul>
+                        </div>
+                        <div class="footer mt-auto py-3">
+                            <p class="text-center">
+                                @product.Value("productPrice")DKK /måned<br />
+                                Ekskl. moms
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            };
+        };
+    </div>
+</div>
+
+
+
+
+
+
+
+
+

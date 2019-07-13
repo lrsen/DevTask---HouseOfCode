@@ -1,0 +1,32 @@
+﻿@inherits Umbraco.Web.Mvc.UmbracoViewPage<ContentModels.SignUpPage>
+@using ContentModels = Umbraco.Web.PublishedModels;
+@{
+    Layout = "master.cshtml";
+
+}
+
+<!-- Main -->
+    <body class="background-img-path-signin">
+        <div class="container-fluid mt-5 ">
+            <header class="row justify-content-center">
+                <h2 class="display-4 font-weight-bold headline-text mb-4">@Model.Value("pageTitle")</h2>
+            </header>
+            <div class="row justify-content-center">
+                <div class="shadow-lg p-3 mb-5 bg-white rounded-corners">
+                    <div class="mx-5 my-3">
+                        <div class="mx-5 my-5">
+                            <div class="mx-5 my-5">
+                                <div class="mx-3 my-5">
+                                    @{ Html.RenderAction("RenderSignup", "Member"); }
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>            
+        </div>
+    </body>>
+
+
+
+@* @{ Html.RenderAction("RenderSignUp", "Member"); }*@

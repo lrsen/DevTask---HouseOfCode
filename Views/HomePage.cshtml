@@ -1,0 +1,77 @@
+﻿@inherits Umbraco.Web.Mvc.UmbracoViewPage<ContentModels.HomePage>
+@using ContentModels = Umbraco.Web.PublishedModels;
+@{
+    Layout = "master.cshtml";
+}
+
+<body class="background-img-path">
+    <!-- Title -->
+    <div class="container-fluid top-buffer">
+        <div class="row justify-content-center">
+            <div class="col-6">
+                <section id="banner" class="headline-text mt-auto">
+                    <h1 class="display-1 font-weight-bold">This is just a</h1>
+                    <h1 class="display-1 font-weight-bold">Headline</h1>
+                </section>
+            </div>
+            <div class="col-3"></div>
+        </div>
+    </div>
+    <!-- Leading paragraph -->
+    <div class="container-fluid">
+        <div class="row justify-content-center">
+            <span class="col-4 pr-5 mt-5 span-text">
+                A good logo works in the simplest form. It is a memorable
+                representation of your brand and inspires confidence in your
+                customers. It should be fresh and original — without visual cliches or
+                amateur effects. A logo is well-designed when it looks as good on a
+                business card as it does on a web page or billboard.
+            </span>
+            <div class="col-5"></div>
+        </div>
+    </div>
+
+    <!-- Products overview -->
+    <div class="container-fluid mid-buffer">
+        <div class="row justify-content-center">
+            <div class="col-9">
+                <h2 class="display-4 font-weight-bold sign-in-text">We offer</h2>
+                <h2 class="text-color-packages">The following packages</h2>
+            </div>
+            @{ Html.RenderAction("RenderProduct", "Member"); }
+        </div>        
+    </div>
+
+    <!-- Contact button -->
+    <div class="container mt-5">
+        <div class="row justify-content-center">
+            <div class="col-6 text-center">
+                <span class="text-color-advertising">
+                    Advertising is telling the world how great you are, whlle publicity is having others tell the world how great you are. Companies and organizations that understand the importance of publicity are generally more succesful than those who use advertising alone to reach their target audience.
+                </span>
+            </div>
+        </div>
+        <div class="row mt-5">
+            <div class="col-5"></div>
+            <button class="col-2 btn btn-bg-color-contact btn-block rounded-pill py-3 px-3">
+                <img style="width: 30px" src="~/images/headset-icon.png" /> <span class="pl-1 btn-text">Contact</span>
+            </button>
+            <div class="col-5"></div>
+        </div>
+    </div>
+</body>
+
+<!-- Footer -->
+<footer id="footer" class="footer footer-buffer">
+    <div class="container-fluid">
+        <div class="row justify-content-center">
+            <div class="col-9">
+                <ul class="navbar-nav">
+                    <li class="navitem footer-text-color">@Model.Value("footerText")</li>
+                </ul>
+            </div>            
+        </div>
+    </div>
+</footer>
+
+

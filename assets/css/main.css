@@ -1,0 +1,105 @@
+﻿.body-color{
+
+}
+.top-buffer {
+    margin-top: 125px;
+}
+.mid-buffer {
+    margin-top: 400px;
+}
+.footer-buffer{
+    margin-top: 500px;
+    margin-bottom: 100px;
+}
+
+.background-img-path-signin {
+    background-image: url("../../images/signIn-background.png");
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.background-img-path {
+    background-image: url("../../images/background.png");
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.text-color-hoc {
+    color: #FEE7FF !important;
+    font-size: larger;
+}
+
+.sign-in-text {
+    color: #5C245F;
+    font-size: larger;
+}
+
+.headline-text {
+    color: #47054A;
+}
+
+.span-text {
+    color: #F3D9F4;
+    font-size: larger;
+}
+.text-on-sign-in-page {
+    color: #EDE5ED;
+    font-size: larger;
+}
+.btn-bg-color {
+    background-color: #E6DCE6 !important;      
+}
+.rememberMe-color {
+    color: #A28DA3;
+}
+.rounded-corners {
+    border-radius: 15px;
+}
+.text-color-advertising {
+    color: #674E68
+}
+.btn-bg-color-contact {
+    background-color: #AA81AC !important;
+    color: white !important;
+    font-size: larger;
+}
+.btn-bg-color-contact:hover {
+    background-color: #5C245F !important;
+}
+.btn-text {
+    font-size: larger;
+}
+.text-color-packages {
+    color: #BAB2BB;
+    font-size: 40px;
+}
+.footer-text-color {
+    color: #AA81AC;
+    font-size: x-large;
+}
+.product-bg-small {
+    background-image: url("../../images/small-bg.png");
+    background-size: cover;
+    background-repeat: no-repeat;
+    /*margin-left: 200px*/
+}
+.product-bg-medium {
+    background-image: url("../../images/medium-bg.png");
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+.product-bg-large {
+    background-image: url("../../images/large-bg.png");
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+.product-bg-enterprise {
+    background-image: url("../../images/enterprise-bg.png");
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+.product-headlines {
+    font-size: 40px;
+    font-weight: 500;
+    color: #47054A;
+} 

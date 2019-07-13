@@ -1,0 +1,32 @@
+﻿@inherits Umbraco.Web.Mvc.UmbracoViewPage<DevTask___HouseOfCode.Models.LoginModel>
+@using Umbraco.Web
+
+@if (!Umbraco.MemberIsLoggedOn())
+{
+    using (Html.BeginUmbracoForm("SubmitLogin", "Member", System.Web.Mvc.FormMethod.Post, new { id = "login" }))
+    {
+        @Html.AntiForgeryToken()
+        <br />
+        <center>
+            @Html.TextBoxFor(model => model.Username)
+            <br />
+            <br />
+            @Html.PasswordFor(model => model.Password)
+            <br />
+            <br />
+            <div class="custom-control custom-checkbox">
+                <input type="checkbox" class="custom-control-input" id="customCheck1">
+                <label class="custom-control-label rememberMe-color" for="customCheck1">Remember me</label>
+            </div>
+            <br />
+            
+            <button class="btn btn-outline-light btn-bg-color btn-block rounded-pill font-weight-bold" name="login" type="submit">Sign in</button>
+            
+            <br />
+            @* form-control *@
+
+            <br />
+            @Html.ValidationSummary()
+        </center>        
+    }
+}

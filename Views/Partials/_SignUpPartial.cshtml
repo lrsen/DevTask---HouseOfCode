@@ -7,7 +7,8 @@
 
 @{
     var registerModel = Members.CreateRegistrationModel();
-
+    registerModel.RedirectUrl = "/";
+    
     @*
         Configurable here:
 
@@ -89,7 +90,7 @@ else
             }
 
             @Html.HiddenFor(m => registerModel.MemberTypeAlias)
-            @*@Html.HiddenFor(m => registerModel.RedirectUrl)*@
+            @Html.HiddenFor(m => registerModel.RedirectUrl)
             @Html.HiddenFor(m => registerModel.UsernameIsEmail)
             <br />
             <button class="btn btn-outline-light btn-bg-color btn-block rounded-pill font-weight-bold">Sign up</button>

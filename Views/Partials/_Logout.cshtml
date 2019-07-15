@@ -6,10 +6,10 @@
     using (Html.BeginUmbracoForm("SubmitLogout", "Member", System.Web.Mvc.FormMethod.Post, new { id = "logout" }))
     {
         @Html.AntiForgeryToken()
-        var myUser = System.Web.Security.Membership.GetUser();
-        if (myUser != null)
+        if (System.Web.Security.Membership.GetUser() != null)
         {
             <button name="login" type="submit" class="btn btn-outline-light rounded-pill nav-link font-weight-bold sign-in-text">Logout</button>
         }
+                    
     }
 }

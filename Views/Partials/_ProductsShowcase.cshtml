@@ -6,119 +6,119 @@
 }
 
 
-<div class="container">
-    <div class="row">
+<div class="container-fluid mt-5">
+    <div class="row justify-content-center">
         @foreach (var product in products)
-        {
+        {            
             if (@product.SortOrder == 0)
             {
-                <div class="col-3">
-                    <div class="product-bg-small">
-                        <div class="product-headlines py-3 px-3">
-                            @product.Value("productTitle")
-                        </div>
-                        <div>
-                            @{ var featureSet = product.Value<string[]>("productFeature"); }
-                            <ul>
-                                @foreach (var feature in featureSet)
-                                {
-                                    <li>
-                                        @feature
-                                    </li>
-                                }
-                            </ul>
-                        </div>
-                        <div class="footer mt-auto py-3">
-                            <p class="text-center">                                
-                                @product.Value("productPrice")DKK /måned<br />
-                                Ekskl. moms                                
-                            </p>
+                <div class="col-2 mx-3 justify-content-center">
+                    <div class="product-bg-small product-bg pb-5 px-auto">
+                        <div class="px-4 py-3">
+                            <div class="product-headlines py-3 pl-4">
+                                @product.Value("productTitle")
+                            </div>
+                            <div>
+                                @{ var featureSet = product.Value<string[]>("productFeature"); }
+                                <ul class="product-font-color">
+                                    @foreach (var feature in featureSet)
+                                    {
+                                        <li class="py-1">@feature</li>
+                                    }
+                                </ul>
+                            </div>                            
+                            <div class="pb-1 px-3 small-height">
+                                <div class="text-center py-3 product-price-color rounded-corners">
+                                    <span class="font-weight-bold">@product.Value("productPrice")DKK</span><span class="font-weight-bold"> /måned<br /></span>
+                                    <span class="sizeforspan">Ekskl. moms</span>
+                                </div>
+                            </div>                            
                         </div>
                     </div>
                 </div>
             };
             if (@product.SortOrder == 1)
             {
-                <div class="col-3">
-                    <div class="product-bg-medium">
-                        <div class="product-headlines py-3 px-3">
-                            @product.Value("productTitle")
-                        </div>
-                        <div>
-                            @{ var featureSet = product.Value<string[]>("productFeature"); }
-                            <ul>
-                                @foreach (var feature in featureSet)
-                                {
-                                    <li>
-                                        @feature
-                                    </li>
-                                }
-                            </ul>
-                        </div>
-                        <div class="footer mt-auto py-3">
-                            <p class="text-center">
-                                @product.Value("productPrice")DKK /måned<br />
-                                Ekskl. moms
-                            </p>
+                <div class="col-2 mx-2 justify-content-center">
+                    <div class="product-bg-medium product-bg pb-5 px-auto">
+                        <div class="px-4 py-3">
+                            <div class="product-headlines py-3 pl-4">
+                                @product.Value("productTitle")
+                            </div>
+                            <div>
+                                @{ var featureSet = product.Value<string[]>("productFeature"); }
+                                <ul class="product-font-color">
+                                    @foreach (var feature in featureSet)
+                                    {
+                                        <li class="py-1">@feature</li>
+                                    }
+                                </ul>
+                            </div>
+                            <div class="pb-1 px-1 medium-height">
+                                <div class="text-center py-3 product-price-color rounded-corners">
+                                    <span class="font-weight-bold">@product.Value("productPrice")DKK</span><span> /måned<br /></span>
+                                    <span class="sizeforspan">Ekskl. moms</span>
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </div>
             };
             if (@product.SortOrder == 2)
             {
-                <div class="col-3">
-                    <div class="product-bg-large">
-                        <div class="product-headlines py-3 px-3">
-                            @product.Value("productTitle")
-                        </div>
-                        <div>
-                            @{ var featureSet = product.Value<string[]>("productFeature"); }
-                            <ul>
-                                @foreach (var feature in featureSet)
-                                {
-                                    <li>
-                                        @feature
-                                    </li>
-                                }
-                            </ul>
-                        </div>
-                        <div class="footer mt-auto py-3">
-                            <p class="text-center">                                
-                                @product.Value("productPrice")DKK /måned<br />
-                                Ekskl. moms                                
-                            </p>
+                <div class="col-2 mx-2 justify-content-center">
+                    <div class="product-bg-large product-bg pb-5 px-auto">
+                        <div class="px-4 py-3">
+                            <div class="product-headlines py-3 pl-4">
+                                @product.Value("productTitle")
+                            </div>
+                            <div>
+                                @{ var featureSet = product.Value<string[]>("productFeature"); }
+                                <ul class="product-font-color">
+                                    @foreach (var feature in featureSet)
+                                    {
+                                        <li class="py-1">@feature</li>
+                                    }
+                                </ul>
+                            </div>
+                            <div class="pb-1 px-1">
+                                <div class="text-center py-3 product-price-color rounded-corners">
+                                    <span class="font-weight-bold">@product.Value("productPrice")DKK</span><span> /måned<br /></span>
+                                    <span class="sizeforspan">Ekskl. moms</span>
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </div>
             };
             if (@product.SortOrder == 3)
             {
-                <div class="col-3">
-                    <div class="product-bg-enterprise rounded-corners">
-                        <div class="product-headlines py-3 px-3">
-                            @product.Value("productTitle")
-                        </div>
-                        <div>
-                            @{ var featureSet = product.Value<string[]>("productFeature"); }
-                            <ul>
-                                @foreach (var feature in featureSet)
-                                {
-                                    <li>
-                                        @feature
-                                    </li>
-                                }
-                            </ul>
-                        </div>
-                        <div class="footer mt-auto py-3">
-                            <p class="text-center">
-                                @product.Value("productPrice")DKK /måned<br />
-                                Ekskl. moms
-                            </p>
+                <div class="col-2 mx-2 justify-content-center">
+                    <div class="product-bg-enterprise product-bg pb-5 px-auto">
+                        <div class="px-4 py-3">
+                            <div class="product-headlines py-3 pl-4">
+                                @product.Value("productTitle")
+                            </div>
+                            <div>
+                                @{ var featureSet = product.Value<string[]>("productFeature"); }
+                                <ul class="product-font-color">
+                                    @foreach (var feature in featureSet)
+                                    {
+                                        <li class="py-1">@feature</li>
+                                    }
+                                </ul>
+                            </div>
+                            <div class="pb-1 px-4">
+                                <div class="text-center py-3 product-price-color rounded-corners">
+                                    <span class="font-weight-bold">@product.Value("productPrice")DKK</span><span> /måned<br /></span>
+                                    <span class="sizeforspan">Ekskl. moms</span>
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </div>
             };
-        };
+        }
     </div>
 </div>
 

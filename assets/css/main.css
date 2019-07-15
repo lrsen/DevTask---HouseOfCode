@@ -1,26 +1,23 @@
-﻿.body-color{
-
-}
-.top-buffer {
+﻿.top-buffer {
     margin-top: 125px;
 }
 .mid-buffer {
     margin-top: 400px;
 }
 .footer-buffer{
-    margin-top: 500px;
-    margin-bottom: 100px;
+    margin-top: 540px;
+    margin-bottom: 70px;
 }
 
 .background-img-path-signin {
     background-image: url("../../images/signIn-background.png");
-    background-size: cover;
+    background-size: 100%;
     background-repeat: no-repeat;
 }
 
 .background-img-path {
     background-image: url("../../images/background.png");
-    background-size: cover;
+    background-size: 100%;
     background-repeat: no-repeat;
 }
 
@@ -77,29 +74,45 @@
     color: #AA81AC;
     font-size: x-large;
 }
-.product-bg-small {
-    background-image: url("../../images/small-bg.png");
+.product-bg {
     background-size: cover;
     background-repeat: no-repeat;
-    /*margin-left: 200px*/
+    height: 85%;
+    width: 330px;
+}
+.product-bg-small {
+    background-image: url("../../images/small-bg.png");   
 }
 .product-bg-medium {
     background-image: url("../../images/medium-bg.png");
-    background-size: cover;
-    background-repeat: no-repeat;
 }
 .product-bg-large {
     background-image: url("../../images/large-bg.png");
-    background-size: cover;
-    background-repeat: no-repeat;
 }
 .product-bg-enterprise {
     background-image: url("../../images/enterprise-bg.png");
-    background-size: cover;
-    background-repeat: no-repeat;
 }
 .product-headlines {
-    font-size: 40px;
+    font-size: 30px;
     font-weight: 500;
     color: #47054A;
-} 
+}
+.product-font-color {
+    color: #866F9E !important;
+    font-size: 18px;
+}
+.product-price-color {
+    background-color: #F5EFF5;
+}
+.small-height {
+    padding-top: 68px;
+}
+.medium-height {
+    padding-top: 35px;
+}
+.sizeforspan {
+    font-size: 12px;
+}
+.btn-size{
+    width: 20px;
+}

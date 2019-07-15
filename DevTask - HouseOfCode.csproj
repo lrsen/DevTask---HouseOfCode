@@ -427,6 +427,7 @@
     <Content Include="Global.asax" />
     <Content Include="images\background.png" />
     <Content Include="images\enterprise-bg.png" />
+    <Content Include="images\form-design.png" />
     <Content Include="images\headset-icon.png" />
     <Content Include="images\HocLogo.png" />
     <Content Include="images\large-bg.png" />

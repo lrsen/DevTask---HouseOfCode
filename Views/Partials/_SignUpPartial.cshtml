@@ -53,18 +53,18 @@ else
 
             @Html.LabelFor(m => registerModel.Username)
             <br />
-            @Html.TextBoxFor(m => registerModel.Name)
+            @Html.TextBoxFor(m => registerModel.Name, new { style = "width: 600px; height: 60px; border-radius: 15px; background-color: #F5EFF5;" })
             @Html.ValidationMessageFor(m => registerModel.Name)
             <br />
 
             @Html.LabelFor(m => registerModel.Email)
             <br />
-            @Html.TextBoxFor(m => registerModel.Email)
+            @Html.TextBoxFor(m => registerModel.Email, new { style = "width: 600px; height: 60px; border-radius: 15px; background-color: #F5EFF5;" })
             @Html.ValidationMessageFor(m => registerModel.Email)
             <br />
             @Html.LabelFor(m => registerModel.Password)
             <br />
-            @Html.PasswordFor(m => registerModel.Password)
+            @Html.PasswordFor(m => registerModel.Password, new { style = "width: 600px; height: 60px; border-radius: 15px; background-color: #F5EFF5;" })
             @Html.ValidationMessageFor(m => registerModel.Password)
             <br />
 
@@ -93,7 +93,7 @@ else
             @Html.HiddenFor(m => registerModel.RedirectUrl)
             @Html.HiddenFor(m => registerModel.UsernameIsEmail)
             <br />
-            <button class="btn btn-outline-light btn-bg-color btn-block rounded-pill font-weight-bold">Sign up</button>
+            <button class="btn btn-outline-light btn-bg-color btn-block rounded-pill font-weight-bold btn-size">Sign up</button>
         </fieldset>
     }
 }
